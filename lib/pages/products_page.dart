@@ -16,7 +16,7 @@ class _ProductsPageState extends State<ProductsPage> {
     (index) => Product(
       name: 'Product $index',
       price: 29.99 + index,
-      imageUrl: 'https://via.placeholder.com/150', // Placeholder image
+      imagePath: 'https://via.placeholder.com/150', // Placeholder image
     ),
   );
 

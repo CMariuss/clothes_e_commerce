@@ -3,7 +3,7 @@ import 'package:clothes_e_commerce/components/bottom_nav_bar.dart';
 import 'package:clothes_e_commerce/components/category_box.dart';
 import 'package:clothes_e_commerce/components/product_container.dart';
 import 'package:clothes_e_commerce/components/see_all_label.dart';
-import 'package:clothes_e_commerce/pages/clothes_list.dart';
+import 'package:clothes_e_commerce/pages/shop_page.dart';
 import 'package:clothes_e_commerce/pages/notifications_page.dart';
 import 'package:clothes_e_commerce/pages/profile_page.dart';
 import 'package:clothes_e_commerce/pages/settings_page.dart';
