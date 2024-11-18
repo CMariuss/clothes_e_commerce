@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class CategoryBox extends StatelessWidget {
   final String title;
-  final Widget child;
+  final IconData icon;
 
   const CategoryBox({
     super.key,
     required this.title,
-    required this.child,
+    required this.icon,
   });
 
   @override
@@ -20,7 +20,10 @@ class CategoryBox extends StatelessWidget {
             color: Colors.grey.shade100,
             borderRadius: BorderRadius.circular(20),
           ),
-          child: child,
+          child: Icon(
+            icon,
+            color: Colors.blueGrey,
+          ),
         ),
         const SizedBox(height: 10),
         Text(

@@ -30,11 +30,11 @@ class _ShopPageState extends State<ShopPage> {
         imagePath: 'images/men_s_shirt_01.png'),
     Product(
         name: 'Women\'s coat',
-        price: 20,
+        price: 32,
         imagePath: 'images/women_s_coat_01.png'),
     Product(
         name: 'Women\'s blouse',
-        price: 20,
+        price: 15,
         imagePath: 'images/women_s_blouse_01.png'),
   ];
 
@@ -72,7 +72,7 @@ class _ShopPageState extends State<ShopPage> {
                 // women
                 CategoryBox(
                   title: 'Women',
-                  child: Icon(Icons.woman),
+                  icon: Icons.woman,
                 ),
 
                 SizedBox(width: 20),
@@ -80,7 +80,7 @@ class _ShopPageState extends State<ShopPage> {
                 // men
                 CategoryBox(
                   title: 'Men',
-                  child: Icon(Icons.man),
+                  icon: Icons.man,
                 ),
 
                 SizedBox(width: 20),
@@ -88,7 +88,7 @@ class _ShopPageState extends State<ShopPage> {
                 // kids
                 CategoryBox(
                   title: 'Kids',
-                  child: Icon(Icons.child_care),
+                  icon: Icons.child_care,
                 ),
 
                 SizedBox(width: 20),
@@ -96,7 +96,7 @@ class _ShopPageState extends State<ShopPage> {
                 // babies
                 CategoryBox(
                   title: 'Babies',
-                  child: Icon(Icons.child_friendly_outlined),
+                  icon: Icons.child_friendly_outlined,
                 ),
 
                 SizedBox(width: 20),
@@ -104,7 +104,7 @@ class _ShopPageState extends State<ShopPage> {
                 // blouses
                 CategoryBox(
                   title: 'Blouses',
-                  child: Icon(Icons.crop_square),
+                  icon: Icons.crop_square_outlined,
                 ),
 
                 SizedBox(width: 20),
@@ -112,7 +112,7 @@ class _ShopPageState extends State<ShopPage> {
                 // trousers
                 CategoryBox(
                   title: 'Trousers',
-                  child: Icon(Icons.circle_outlined),
+                  icon: Icons.circle_outlined,
                 ),
               ],
             ),
