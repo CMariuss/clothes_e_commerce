@@ -1,5 +1,6 @@
 import 'package:clothes_e_commerce/pages/cart_page.dart';
 import 'package:clothes_e_commerce/pages/categories_page.dart';
+import 'package:clothes_e_commerce/pages/company_page.dart';
 import 'package:clothes_e_commerce/pages/home_page.dart';
 import 'package:clothes_e_commerce/pages/products_page.dart';
 import 'package:clothes_e_commerce/pages/search_page.dart';
@@ -20,6 +21,7 @@ class ECommerceApp extends StatelessWidget {
       home: const HomePage(),
       theme: lightMode,
       routes: {
+        '/company_page': (context) => const CompanyPage(),
         '/products_page': (context) => const ProductsPage(),
         '/categories_page': (context) => const CategoriesPage(),
         '/search_page': (context) => const SearchPage(),
