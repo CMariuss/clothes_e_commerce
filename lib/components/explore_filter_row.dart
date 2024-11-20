@@ -11,9 +11,9 @@ class ExploreFilterRow extends StatefulWidget {
 class _ExploreFilterRowState extends State<ExploreFilterRow> {
   // Dropdown values
   String selectedRating = 'Rating';
-  String selectedPrice = 'Price';
   String selectedSize = 'Size';
   String selectedColor = 'Color';
+  String selectedPrice = 'Price';
 
   // Dropdown options
   final List<String> ratingOptions = [
@@ -54,12 +54,6 @@ class _ExploreFilterRowState extends State<ExploreFilterRow> {
             });
           }),
           // const SizedBox(width: 10),
-          _buildDropdown('Price', selectedPrice, priceOptions, (value) {
-            setState(() {
-              selectedPrice = value!;
-            });
-          }),
-          // const SizedBox(width: 10),
           _buildDropdown('Size', selectedSize, sizeOptions, (value) {
             setState(() {
               selectedSize = value!;
@@ -69,6 +63,12 @@ class _ExploreFilterRowState extends State<ExploreFilterRow> {
           _buildDropdown('Color', selectedColor, colorOptions, (value) {
             setState(() {
               selectedColor = value!;
+            });
+          }),
+          // const SizedBox(width: 10),
+          _buildDropdown('Price', selectedPrice, priceOptions, (value) {
+            setState(() {
+              selectedPrice = value!;
             });
           }),
         ],
