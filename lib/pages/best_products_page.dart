@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../components/product_container.dart';
 import '../models/product.dart';
 
-class ProductsPage extends StatefulWidget {
-  const ProductsPage({super.key});
+class BestProductsPage extends StatefulWidget {
+  const BestProductsPage({super.key});
 
   @override
-  State<ProductsPage> createState() => _ProductsPageState();
+  State<BestProductsPage> createState() => _BestProductsPageState();
 }
 
-class _ProductsPageState extends State<ProductsPage> {
+class _BestProductsPageState extends State<BestProductsPage> {
   final List<Product> products = List.generate(
     10,
     (index) => Product(
@@ -24,7 +24,7 @@ class _ProductsPageState extends State<ProductsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Products'),
+        title: const Text('Best products'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
@@ -33,9 +33,9 @@ class _ProductsPageState extends State<ProductsPage> {
           // physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 0.8,
-            crossAxisSpacing: 5,
-            mainAxisSpacing: 10,
+            childAspectRatio: 0.7,
+            crossAxisSpacing: 6,
+            mainAxisSpacing: 6,
           ),
           itemCount: products.length,
           itemBuilder: (BuildContext context, int index) {
