@@ -76,13 +76,16 @@ class _ShopPageState extends State<ShopPage> {
           const SizedBox(height: 15),
           // clothes list
           SizedBox(
-            height: 250,
+            height: 260,
             child: ListView.builder(
               // shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemCount: products.length,
               itemBuilder: (BuildContext context, int index) {
-                return ProductContainer(product: products[index]);
+                return Padding(
+                  padding: const EdgeInsets.only(right: 15),
+                  child: ProductContainer(product: products[index]),
+                );
               },
             ),
           )

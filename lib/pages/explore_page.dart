@@ -19,7 +19,7 @@ class _ExplorePageState extends State<ExplorePage> {
     (index) => Product(
       name: 'Product $index',
       price: 29.99 + index,
-      imagePath: 'https://via.placeholder.com/150', // Placeholder image
+      imagePath: 'images/winter_collection_ad.png', // Placeholder image
     ),
   );
 
@@ -56,8 +56,8 @@ class _ExplorePageState extends State<ExplorePage> {
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       childAspectRatio: 0.7,
-                      crossAxisSpacing: 5,
-                      mainAxisSpacing: 5,
+                      crossAxisSpacing: 15,
+                      mainAxisSpacing: 15,
                     ),
                   ),
                 ],
