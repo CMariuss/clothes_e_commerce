@@ -4,7 +4,7 @@ E-Commerce App for clothes
 
 ### Shop Page
 
-![img.png](img.png)
+![Shop Page] (images/general/shop_page.png)
 
 ## References
 
