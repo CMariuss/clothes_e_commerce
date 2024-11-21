@@ -4,9 +4,15 @@ E-Commerce App for clothes
 
 ### Shop Page
 
-<div style="display: flex; justify-content: space-between;">
-  <img src="images/general/shop_page.png" alt="Shop Page" width="45%">
-  <img src="images/general/explore_page.png" alt="Explore Page" width="45%">
+<div style="display: flex; justify-content: space-around;">
+  <figure>
+    <img src="images/general/shop_page.png" alt="Shop Page" width="45%">
+    <figcaption>Shop page</figcaption>
+  </figure>
+  <figure>
+    <img src="images/general/explore_page.png" alt="Explore Page" width="45%">
+    <figcaption>Explore page</figcaption>
+  </figure>
 </div>
 
 ## References
