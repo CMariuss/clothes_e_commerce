@@ -1,8 +1,8 @@
 import 'package:clothes_e_commerce/components/categories_row.dart';
+import 'package:clothes_e_commerce/models/product_list.dart';
 import 'package:flutter/material.dart';
 
 import '../components/ad_container.dart';
-import '../components/category_box.dart';
 import '../components/product_container.dart';
 import '../components/see_all_label.dart';
 import '../models/product.dart';
@@ -15,30 +15,13 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
-  final List<String> imagePathList = [
-    'images/men/jacket_men_02.png',
-    'images/women/coat_women_01.png',
-    'images/women/coat_women_02.png',
-    'images/men/jacket_men_01.png',
-  ];
-
+  final productList = ProductList();
   late List<Product> products = [];
-
-  List<Product> generateProductList() {
-    return List.generate(
-      4,
-      (index) => Product(
-        name: 'Product $index',
-        price: 29.99 + index,
-        imagePath: imagePathList[index], // Placeholder image
-      ),
-    );
-  }
 
   @override
   void initState() {
     super.initState();
-    products = generateProductList();
+    products = productList.generateProductList();
   }
 
   @override
@@ -85,7 +68,7 @@ class _ShopPageState extends State<ShopPage> {
               itemCount: products.length,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: const EdgeInsets.only(right: 15),
+                  padding: const EdgeInsets.only(right: 20),
                   child: ProductContainer(product: products[index]),
                 );
               },
