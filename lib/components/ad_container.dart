@@ -6,7 +6,7 @@ class AdContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final adImage = Image.asset(
-      'images/winter_collection_ad.png',
+      'images/men/jacket_men_01.png',
     );
 
     return Expanded(
@@ -16,7 +16,7 @@ class AdContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
             fit: BoxFit.cover,
-            alignment: Alignment.topLeft,
+            alignment: Alignment.topRight,
             image: adImage.image,
           ),
         ),

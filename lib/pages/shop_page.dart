@@ -15,29 +15,31 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
-  final List<Product> products_01 = List.generate(
-    10,
-    (index) => Product(
-      name: 'Product $index',
-      price: 29.99 + index,
-      imagePath: 'https://via.placeholder.com/150', // Placeholder image
-    ),
-  );
-
-  final List<Product> products = [
-    Product(
-        name: 'Men\'s shirt - flowers',
-        price: 20,
-        imagePath: 'images/men_s_shirt_01.png'),
-    Product(
-        name: 'Women\'s coat',
-        price: 32,
-        imagePath: 'images/women_s_coat_01.png'),
-    Product(
-        name: 'Women\'s blouse',
-        price: 15,
-        imagePath: 'images/women_s_blouse_01.png'),
+  final List<String> imagePathList = [
+    'images/men/jacket_men_02.png',
+    'images/women/coat_women_01.png',
+    'images/women/coat_women_02.png',
+    'images/men/jacket_men_01.png',
   ];
+
+  late List<Product> products = [];
+
+  List<Product> generateProductList() {
+    return List.generate(
+      4,
+      (index) => Product(
+        name: 'Product $index',
+        price: 29.99 + index,
+        imagePath: imagePathList[index], // Placeholder image
+      ),
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    products = generateProductList();
+  }
 
   @override
   Widget build(BuildContext context) {
