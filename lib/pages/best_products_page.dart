@@ -3,12 +3,6 @@ import 'package:flutter/material.dart';
 import '../components/product_container.dart';
 import '../models/product.dart';
 
-// image references
-//https://unsplash.com/photos/woman-wearing-brown-single-breasted-coat-standing-in-front-of-gray-brick-wall-zkHv9pvrE9U?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash
-//https://unsplash.com/photos/person-in-brown-jacket-holding-camera-u0c_292QwlU?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash
-//https://unsplash.com/photos/a-woman-walking-down-a-path-holding-an-umbrella-huptCEbcUjI?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash
-// https://unsplash.com/photos/man-facing-mountain-covered-with-snow-elkVRHxgmGE?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash
-
 class BestProductsPage extends StatefulWidget {
   const BestProductsPage({super.key});
 
