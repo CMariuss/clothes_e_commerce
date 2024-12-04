@@ -5,34 +5,36 @@ import 'package:clothes_e_commerce/themes/text/fonts.dart';
 import 'package:flutter/material.dart';
 
 class SavedProductTile extends StatelessWidget {
-  final List<Product> productList;
+  final Product product;
+  final Function(BuildContext)? onDeletePressed;
 
   const SavedProductTile({
     super.key,
-    required this.productList,
+    required this.product,
+    required this.onDeletePressed,
   });
 
   @override
   Widget build(BuildContext context) {
     return CustomSlidable(
-      onDeletePressed: (value) {},
+      onDeletePressed: onDeletePressed,
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 4),
         decoration: BoxDecoration(color: Theme.of(context).colorScheme.primary),
         child: ListTile(
           leading: ClipRRect(
             borderRadius: BorderRadius.circular(8),
-            child: Image.asset('images/men/jacket_men_01.png'),
+            child: Image.asset(product.imagePath),
           ),
           title: Text(
-            productList.first.name,
+            product.name,
             style: fProductTitleFont(context),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
-          subtitle: ReviewsContainer(product: productList.first),
+          subtitle: ReviewsContainer(product: product),
           trailing: Text(
-            '\$${productList.first.price}',
+            '\$${product.price}',
             style: fProductPriceFont(
               context,
               Theme.of(context).colorScheme.tertiary,

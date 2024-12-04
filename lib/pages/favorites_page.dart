@@ -24,13 +24,18 @@ class _FavoritesPageState extends State<FavoritesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-      children: [
-        const SizedBox(height: 20),
-        SavedProductTile(
-          productList: productList,
-        ),
-      ],
-    ));
+      body: ListView.builder(
+        itemCount: productList.length,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: SavedProductTile(
+              product: productList[index],
+              onDeletePressed: (context) {},
+            ),
+          );
+        },
+      ),
+    );
   }
 }
