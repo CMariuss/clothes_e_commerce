@@ -1,3 +1,4 @@
+import 'package:clothes_e_commerce/pages/auth_pages/auth_page.dart';
 import 'package:clothes_e_commerce/pages/auth_pages/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class _ProfilePageState extends State<ProfilePage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const LoginPage(),
+              builder: (context) => const AuthPage(),
             ),
           );
         },
