@@ -25,7 +25,7 @@ class BottomNavBar extends StatelessWidget {
           GButton(icon: Icons.storefront),
           GButton(icon: Icons.person),
           GButton(icon: Icons.notifications),
-          GButton(icon: Icons.settings),
+          GButton(icon: Icons.favorite),
         ],
       ),
     );

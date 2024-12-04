@@ -3,7 +3,9 @@ import 'package:clothes_e_commerce/pages/cart_page.dart';
 import 'package:clothes_e_commerce/pages/categories_page.dart';
 import 'package:clothes_e_commerce/pages/company_page.dart';
 import 'package:clothes_e_commerce/pages/explore_page.dart';
+import 'package:clothes_e_commerce/pages/favorites_page.dart';
 import 'package:clothes_e_commerce/pages/home_page.dart';
+import 'package:clothes_e_commerce/pages/settings_page.dart';
 import 'package:clothes_e_commerce/themes/light_mode.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +24,7 @@ class ECommerceApp extends StatelessWidget {
         '/categories_page': (context) => const CategoriesPage(),
         '/search_page': (context) => const ExplorePage(),
         '/cart_page': (context) => const CartPage(),
+        '/settings_page': (context) => const SettingsPage(),
       },
     );
   }
