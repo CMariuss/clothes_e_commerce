@@ -8,9 +8,9 @@ TextStyle fProductTitleFont(BuildContext context) {
   );
 }
 
-TextStyle fProductPriceFont(BuildContext context) {
+TextStyle fProductPriceFont(BuildContext context, Color color) {
   return TextStyle(
     fontSize: 14,
-    color: Colors.grey.shade900,
+    color: color,
   );
 }
