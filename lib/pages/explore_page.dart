@@ -15,14 +15,14 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
-  final productList = ProductList();
-
   late List<Product> products = [];
 
   @override
   void initState() {
     super.initState();
-    products = productList.generateProductList();
+    setState(() {
+      products = ProductList.productList;
+    });
   }
 
   @override

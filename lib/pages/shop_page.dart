@@ -15,13 +15,15 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
-  final productList = ProductList();
   late List<Product> products = [];
 
   @override
   void initState() {
     super.initState();
-    products = productList.generateProductList();
+    ProductList.generateProductList();
+    setState(() {
+      products = ProductList.productList;
+    });
   }
 
   @override

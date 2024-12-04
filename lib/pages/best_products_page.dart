@@ -12,13 +12,14 @@ class BestProductsPage extends StatefulWidget {
 }
 
 class _BestProductsPageState extends State<BestProductsPage> {
-  final productList = ProductList();
   late List<Product> products = [];
 
   @override
   void initState() {
     super.initState();
-    products = productList.generateProductList();
+    setState(() {
+      products = ProductList.productList;
+    });
   }
 
   @override

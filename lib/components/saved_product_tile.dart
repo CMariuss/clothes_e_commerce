@@ -1,7 +1,15 @@
+import 'package:clothes_e_commerce/components/reviews_container.dart';
+import 'package:clothes_e_commerce/models/product.dart';
+import 'package:clothes_e_commerce/themes/text/fonts.dart';
 import 'package:flutter/material.dart';
 
 class SavedProductTile extends StatelessWidget {
-  const SavedProductTile({super.key});
+  final List<Product> productList;
+
+  const SavedProductTile({
+    super.key,
+    required this.productList,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +21,17 @@ class SavedProductTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           child: Image.asset('images/men/jacket_men_01.png'),
         ),
-        title: const Text('Men\'s jacket'),
-        subtitle: const Text('rating'),
-        trailing: const Text('\$20'),
+        title: Text(
+          productList.first.name,
+          style: fProductTitleFont(context),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        ),
+        subtitle: ReviewsContainer(product: productList.first),
+        trailing: Text(
+          '\$${productList.first.price}',
+          style: fProductPriceFont(context),
+        ),
       ),
     );
   }

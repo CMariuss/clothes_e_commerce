@@ -1,3 +1,5 @@
+import 'package:clothes_e_commerce/components/reviews_container.dart';
+import 'package:clothes_e_commerce/themes/text/fonts.dart';
 import 'package:flutter/material.dart';
 
 import '../models/product.dart';
@@ -44,53 +46,14 @@ class ProductContainer extends StatelessWidget {
               const SizedBox(width: 15),
 
               // Reviews
-              Row(
-                children: [
-                  // icon
-                  const Icon(
-                    Icons.star,
-                    size: 18,
-                    color: Colors.orangeAccent,
-                  ),
-
-                  // rating number
-                  Text(
-                    product.rating.toString(),
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey.shade900,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-
-                  const SizedBox(width: 5),
-
-                  // reviews number
-                  Text(
-                    '(${product.reviewsNumber.toString()})',
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey.shade500,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              )
+              ReviewsContainer(product: product),
             ],
           ),
 
           // Product Name
           Text(
             product.name,
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-              color: Colors.grey.shade900,
-            ),
+            style: fProductTitleFont(context),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
