@@ -2,6 +2,7 @@ import 'package:clothes_e_commerce/components/categories_row.dart';
 import 'package:clothes_e_commerce/components/explore_filter_row.dart';
 import 'package:clothes_e_commerce/components/search_text_field.dart';
 import 'package:clothes_e_commerce/models/product_list.dart';
+import 'package:clothes_e_commerce/pages/product_page.dart';
 import 'package:flutter/material.dart';
 
 import '../components/product_container.dart';
@@ -52,7 +53,16 @@ class _ExplorePageState extends State<ExplorePage> {
                     SliverGrid(
                       delegate: SliverChildBuilderDelegate(
                         (BuildContext context, int index) {
-                          return ProductContainer(product: products[index]);
+                          return ProductContainer(
+                            product: products[index],
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    ProductPage(product: products[index]),
+                              ),
+                            ),
+                          );
                         },
                         childCount: products.length,
                       ),

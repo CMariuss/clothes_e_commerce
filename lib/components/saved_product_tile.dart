@@ -28,7 +28,7 @@ class SavedProductTile extends StatelessWidget {
           ),
           title: Text(
             product.name,
-            style: fProductTitleFont(context),
+            style: fProductTitleFont(context, 15),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),

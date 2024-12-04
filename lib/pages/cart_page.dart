@@ -30,44 +30,6 @@ class _CartPageState extends State<CartPage> {
       appBar: AppBar(
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
         centerTitle: true,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // total price
-            // Text(
-            //   'Cart',
-            //   style: TextStyle(
-            //     fontSize: 20,
-            //     fontWeight: FontWeight.bold,
-            //     color: Theme.of(context).colorScheme.tertiary,
-            //   ),
-            // ),
-
-            // const SizedBox(width: 10),
-            //
-            // // title
-            // const Text(
-            //   '4',
-            //   style: TextStyle(
-            //     fontSize: 17,
-            //     fontWeight: FontWeight.bold,
-            //     color: Colors.deepOrangeAccent,
-            //   ),
-            // ),
-            //
-            // const SizedBox(width: 10),
-            //
-            // // total price
-            // Text(
-            //   'items',
-            //   style: TextStyle(
-            //     fontSize: 17,
-            //     fontWeight: FontWeight.bold,
-            //     color: Theme.of(context).colorScheme.tertiary,
-            //   ),
-            // ),
-          ],
-        ),
         actions: [
           // title
           const Text(
@@ -116,24 +78,35 @@ class _CartPageState extends State<CartPage> {
             ),
 
             // checkout
-            const SizedBox(
+            SizedBox(
               height: 50,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
+                    const Expanded(
                       flex: 1,
                       child: TotalPriceContainer(),
                     ),
 
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
 
                     // buy button
                     Expanded(
                       flex: 2,
-                      child: CheckoutButton(),
+                      child: CheckoutButton(
+                        color: Theme.of(context).colorScheme.tertiary,
+                        child: const Text(
+                          'Checkout',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
+                        ),
+                        onTap: () {},
+                      ),
                     ),
                   ],
                 ),

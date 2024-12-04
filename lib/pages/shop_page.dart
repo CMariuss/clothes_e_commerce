@@ -1,5 +1,6 @@
 import 'package:clothes_e_commerce/components/categories_row.dart';
 import 'package:clothes_e_commerce/models/product_list.dart';
+import 'package:clothes_e_commerce/pages/product_page.dart';
 import 'package:flutter/material.dart';
 
 import '../components/ad_container.dart';
@@ -71,7 +72,17 @@ class _ShopPageState extends State<ShopPage> {
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
                   padding: const EdgeInsets.only(right: 20),
-                  child: ProductContainer(product: products[index]),
+                  child: ProductContainer(
+                    product: products[index],
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProductPage(
+                          product: products[index],
+                        ),
+                      ),
+                    ),
+                  ),
                 );
               },
             ),

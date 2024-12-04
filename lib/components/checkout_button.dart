@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
 
 class CheckoutButton extends StatelessWidget {
-  const CheckoutButton({super.key});
+  final Widget child;
+  final Color color;
+
+  final Function()? onTap;
+
+  const CheckoutButton({
+    super.key,
+    required this.child,
+    required this.color,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.tertiary,
+        color: color,
         borderRadius: BorderRadius.circular(7),
       ),
-      child: const Center(
-        child: Text(
-          'Checkout',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
-            color: Colors.white,
-          ),
-        ),
+      child: Center(
+        child: child,
       ),
     );
   }

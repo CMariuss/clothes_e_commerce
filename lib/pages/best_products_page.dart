@@ -1,3 +1,4 @@
+import 'package:clothes_e_commerce/pages/product_page.dart';
 import 'package:flutter/material.dart';
 
 import '../components/product_container.dart';
@@ -42,7 +43,15 @@ class _BestProductsPageState extends State<BestProductsPage> {
             ),
             itemCount: products.length,
             itemBuilder: (BuildContext context, int index) {
-              return ProductContainer(product: products[index]);
+              return ProductContainer(
+                product: products[index],
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProductPage(product: products[index]),
+                  ),
+                ),
+              );
             },
           ),
         ),

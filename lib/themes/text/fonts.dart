@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-TextStyle fProductTitleFont(BuildContext context) {
+TextStyle fProductTitleFont(BuildContext context, double fontSize) {
   return TextStyle(
-    fontSize: 15,
+    fontSize: fontSize,
     fontWeight: FontWeight.bold,
-    color: Colors.grey.shade900,
+    color: Theme.of(context).colorScheme.inversePrimary,
   );
 }
 
