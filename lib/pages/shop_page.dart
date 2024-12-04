@@ -37,7 +37,7 @@ class _ShopPageState extends State<ShopPage> {
           // ad container
           const AdContainer(),
 
-          const SizedBox(height: 25),
+          const SizedBox(height: 30),
 
           // categories label
           SeeAllLabel(

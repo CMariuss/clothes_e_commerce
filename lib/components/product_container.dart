@@ -62,7 +62,8 @@ class ProductContainer extends StatelessWidget {
             '\$${product.price.toStringAsFixed(2)}',
             style: TextStyle(
               fontSize: 14,
-              color: Colors.grey.shade900,
+              fontWeight: FontWeight.w600,
+              color: Theme.of(context).colorScheme.tertiary,
             ),
           ),
         ],

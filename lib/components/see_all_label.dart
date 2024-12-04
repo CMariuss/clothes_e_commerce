@@ -19,14 +19,16 @@ class SeeAllLabel extends StatelessWidget {
           label,
           style: TextStyle(
             fontWeight: FontWeight.w600,
-            color: Colors.grey.shade800,
+            color: Theme.of(context).colorScheme.inversePrimary,
           ),
         ),
         GestureDetector(
           onTap: onTap,
-          child: const Text(
+          child: Text(
             'See all',
-            style: TextStyle(color: Colors.blueGrey),
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.tertiary,
+            ),
           ),
         ),
       ],

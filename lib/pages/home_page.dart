@@ -49,14 +49,14 @@ class _HomePageState extends State<HomePage> {
       // app bar
       appBar: AppBar(
         // app logo
-        foregroundColor: Colors.grey.shade900,
+        foregroundColor: Theme.of(context).colorScheme.inversePrimary,
         leading: Padding(
           padding: const EdgeInsets.only(left: 20),
           child: IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.layers_rounded,
               size: 32,
-              color: Colors.blueGrey,
+              color: Theme.of(context).colorScheme.tertiary,
             ),
             onPressed: () {
               Navigator.pushNamed(context, '/company_page');

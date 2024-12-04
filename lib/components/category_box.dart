@@ -22,14 +22,16 @@ class CategoryBox extends StatelessWidget {
           ),
           child: Icon(
             icon,
-            color: Colors.blueGrey,
+            size: 22,
+            color: Theme.of(context).colorScheme.tertiary,
           ),
         ),
         const SizedBox(height: 5),
         Text(
           title,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 12,
+            color: Theme.of(context).colorScheme.inversePrimary,
           ),
         ),
       ],

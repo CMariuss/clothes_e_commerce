@@ -1,4 +1,5 @@
-import 'package:clothes_e_commerce/components/buy_button.dart';
+import 'package:clothes_e_commerce/components/checkout_button.dart';
+import 'package:clothes_e_commerce/components/total_price_container.dart';
 import 'package:flutter/material.dart';
 
 import '../components/saved_product_tile.dart';
@@ -27,28 +28,69 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        foregroundColor: Theme.of(context).colorScheme.secondary,
+        foregroundColor: Theme.of(context).colorScheme.inversePrimary,
         centerTitle: true,
-        // title: const Text('Cart'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // total price
+            // Text(
+            //   'Cart',
+            //   style: TextStyle(
+            //     fontSize: 20,
+            //     fontWeight: FontWeight.bold,
+            //     color: Theme.of(context).colorScheme.tertiary,
+            //   ),
+            // ),
+
+            // const SizedBox(width: 10),
+            //
+            // // title
+            // const Text(
+            //   '4',
+            //   style: TextStyle(
+            //     fontSize: 17,
+            //     fontWeight: FontWeight.bold,
+            //     color: Colors.deepOrangeAccent,
+            //   ),
+            // ),
+            //
+            // const SizedBox(width: 10),
+            //
+            // // total price
+            // Text(
+            //   'items',
+            //   style: TextStyle(
+            //     fontSize: 17,
+            //     fontWeight: FontWeight.bold,
+            //     color: Theme.of(context).colorScheme.tertiary,
+            //   ),
+            // ),
+          ],
+        ),
         actions: [
           // title
-          Text(
-            'Total: ',
+          const Text(
+            '4',
             style: TextStyle(
               fontSize: 17,
               fontWeight: FontWeight.bold,
-              color: Theme.of(context).colorScheme.secondary,
+              color: Colors.deepOrangeAccent,
             ),
           ),
+
+          const SizedBox(width: 10),
+
           // total price
           Text(
-            '\$70.96',
+            'items',
             style: TextStyle(
               fontSize: 17,
               fontWeight: FontWeight.bold,
               color: Theme.of(context).colorScheme.tertiary,
             ),
           ),
+
           const SizedBox(width: 20),
         ],
       ),
@@ -74,33 +116,25 @@ class _CartPageState extends State<CartPage> {
             ),
 
             // checkout
-            SizedBox(
+            const SizedBox(
               height: 50,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
                       flex: 1,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.inversePrimary,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Center(
-                          child: Icon(
-                            Icons.favorite,
-                            color: Theme.of(context).colorScheme.surface,
-                          ),
-                        ),
-                      ),
+                      child: TotalPriceContainer(),
                     ),
 
-                    const SizedBox(width: 10),
+                    SizedBox(width: 10),
 
                     // buy button
-                    const BuyButton(),
+                    Expanded(
+                      flex: 2,
+                      child: CheckoutButton(),
+                    ),
                   ],
                 ),
               ),

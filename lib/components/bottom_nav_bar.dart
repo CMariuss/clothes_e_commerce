@@ -17,7 +17,7 @@ class BottomNavBar extends StatelessWidget {
         haptic: false,
         selectedIndex: 0,
         color: Colors.grey.shade400,
-        activeColor: Colors.blueGrey,
+        activeColor: Theme.of(context).colorScheme.tertiary,
         duration: const Duration(milliseconds: 100),
         mainAxisAlignment: MainAxisAlignment.center,
         onTabChange: onTabChange,

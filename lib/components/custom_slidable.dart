@@ -24,7 +24,7 @@ class CustomSlidable extends StatelessWidget {
             onPressed: onDeletePressed,
             icon: Icons.delete,
             foregroundColor: Colors.white,
-            backgroundColor: Colors.orange,
+            backgroundColor: Colors.redAccent,
             // borderRadius: BorderRadius.circular(7.0),
           ),
         ],
