@@ -17,7 +17,7 @@ class ReviewsContainer extends StatelessWidget {
         const Icon(
           Icons.star,
           size: 18,
-          color: Colors.orangeAccent,
+          color: Colors.orange,
         ),
 
         // rating number

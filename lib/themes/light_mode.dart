@@ -5,7 +5,7 @@ ThemeData lightMode = ThemeData(
     surface: Colors.white,
     primary: Colors.grey.shade100,
     secondary: Colors.grey.shade600,
-    tertiary: Colors.blueGrey,
-    inversePrimary: Colors.grey.shade900,
+    tertiary: Colors.deepOrangeAccent,
+    inversePrimary: Colors.grey.shade700,
   ),
 );
